@@ -1,0 +1,8 @@
+    .linkFG {
+        stroke: #ccc;
+    }
+    
+    .nodeFG text {
+        pointer-events: none;
+        font: 10px sans-serif;
+    }

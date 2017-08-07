@@ -1,0 +1,89 @@
+.barF {
+  fill: #ABCDEF
+}
+
+/* colore scorrimento su istogramma */
+.barF:hover {
+  fill: #6397D0
+}
+
+.yAxis path,
+.yAxis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.yAxis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.xAxis path,
+.xAxis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.xAxis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.yAxisF path,
+.yAxisF line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.yAxisF text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.xAxisF path,
+.xAxisF line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.xAxisF text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+
+    .toolTipSkillBC {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        position: absolute;
+        display: none;
+        width: auto;
+        height: auto;
+        background: none repeat scroll 0 0 white;
+        border: 0 none;
+        border-radius: 8px 8px 8px 8px;
+        box-shadow: -3px 3px 15px #888888;
+        color: black;
+        font: 12px sans-serif;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .toolTipFigureBC {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        position: absolute;
+        display: none;
+        width: auto;
+        height: auto;
+        background: none repeat scroll 0 0 white;
+        border: 0 none;
+        border-radius: 8px 8px 8px 8px;
+        box-shadow: -3px 3px 15px #888888;
+        color: black;
+        font: 12px sans-serif;
+        padding: 5px;
+        text-align: center;
+    }
