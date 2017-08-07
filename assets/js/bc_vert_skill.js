@@ -2,7 +2,7 @@
 var data;
 // Get the data
 d3.json("assets/js/hier_skills.json", function(error, hbcdata) {
-  console.log("json:",hbcdata)
+  //console.log("json:",hbcdata)
  
   hbcdata.forEach(function(d) {
 		d.value = +d.value;
@@ -11,13 +11,13 @@ d3.json("assets/js/hier_skills.json", function(error, hbcdata) {
 	d3.select('#inds')
 			.on("change", function () {
 				var sect = this
-				console.log(sect);
+				//console.log(sect);
 				var section = sect.options[sect.selectedIndex].value;
-                console.log(section)
+                //console.log(section)
 
 				data = filterJSON(hbcdata, 'skill', section);
 
-                console.log(data)
+                //console.log(data)
 	      //debugger
 	      
 		    data.forEach(function(d) {
@@ -37,7 +37,7 @@ d3.json("assets/js/hier_skills.json", function(error, hbcdata) {
 });
 
 function filterJSON(dati, key, value) {
-   console.log("filter: ",key, value, dati)
+   //console.log("filter: ",key, value, dati)
   var result = [];
   dati.forEach(function(val,idx,arr){
     //  console.log("foreach")
@@ -47,7 +47,7 @@ function filterJSON(dati, key, value) {
       result.push(val)
     }
   })
-  console.log("risultato: ",result);
+  //console.log("risultato: ",result);
   return result;
 
 }
@@ -55,7 +55,7 @@ function filterJSON(dati, key, value) {
 
 function updatehbcSkill(data){
 	//set domain for the x axis
-    console.log("update:", data)
+    //console.log("update:", data)
 	yChart.domain(data.map(function(d){ 
 		return d.figura;
 		/*
@@ -89,7 +89,8 @@ function updatehbcSkill(data){
 		.attr("class", "bar")
 		//.attr("x", function(d, i){ return i * barHeight + 1 })
 		.attr("x",0)
-		.attr("y", function(d, i){ console.log("y: ", i*barHeight+1)
+		.attr("y", function(d, i){ 
+			//console.log("y: ", i*barHeight+1)
 			return  i * barHeight + 1 })
 			//return d.frequenza;})
 		//.attr("width", function(d){console.log("valore", xChart(d.frequenza)) 

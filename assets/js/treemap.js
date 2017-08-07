@@ -90,7 +90,7 @@
 			c.dx *= d.dx;
 			c.dy *= d.dy;
 			c.parent = d;
-			console.log("d: ",d,"c:",c);
+			//console.log("d: ",d,"c:",c);
 			// recursion
 			layout(c);
 		  });
@@ -107,7 +107,7 @@
 			c.dx *= d.dx;
 			c.dy *= d.dy;
 			c.parent = d;
-			console.log("d: ",d,"c:",c);
+			//console.log("d: ",d,"c:",c);
 			// recursion
 			layout(c);
 		  });
@@ -124,7 +124,7 @@
 	}
 
 	d3.json("assets/data/flare2.json", function(root) {
-	  console.log(root)
+	  //console.log(root)
 	  initialize(root);
 	  accumulate(root);
 	  layout(root);
@@ -141,7 +141,9 @@
 		grandparent
 		  .datum(d.parent)
 		  .select("rect")
-		  .attr("fill", function(){console.log(colorTM(d.value/100000)); return colorTM(d['value']/1000000)})
+		  .attr("fill", function(){
+				//console.log(colorTM(d.value/100000)); 
+				return colorTM(d['value']/1000000)})
 
 		var g1 = svgTM.insert("g", ".grandparent")
 			.datum(d)
@@ -206,7 +208,7 @@
 		  // Draw child nodes on top of parent nodes.
 
 		  svgTM.selectAll(".depth").sort(function(a, b) {
-				console.log("sel all depth");
+				//console.log("sel all depth");
 				 return a.depth - b.depth; });
 
 		  // Fade-in entering text.
